@@ -830,7 +830,7 @@
     try {
       var handle = await ns.fs.getRecentDirectoryRootHandle(recentId);
       if (!handle) {
-        showBanner("warn", "La carpeta reciente ya no esta disponible. Se eliminara de la lista.");
+        showBanner("warn", "La carpeta reciente ya no está disponible. Se eliminará de la lista.");
         await ns.fs.removeRecentDirectoryRoot(recentId);
         await refreshRecentFoldersUi();
         return;

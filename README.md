@@ -2,42 +2,42 @@
 
 Visor local de Markdown en `HTML + JS` (sin servidor) para explorar carpetas con `.md` en subcarpetas, renderizar con buen formato y soporte de Mermaid.
 
-## Features
+## Características
 
 - Explorador recursivo de Markdown (`.md`, `.markdown`, `.mdown`)
 - Selector de carpeta local
 - Renderizado con `markdown-it` (tablas, tareas, footnotes, deflists si los plugins cargan)
-- Resaltado de codigo (`highlight.js`)
+- Resaltado de código (`highlight.js`)
 - Soporte de diagramas `Mermaid`
 - Temas CSS locales seleccionables desde un desplegable (8 temas)
-- Enlaces e imagenes relativas resueltas dentro de la carpeta seleccionada
+- Enlaces e imágenes relativas resueltas dentro de la carpeta seleccionada
 - Auto-refresco (mejor soporte con `showDirectoryPicker` en Chrome/Edge)
 - Scroll independiente entre explorador y visor
 - Tablas anchas con scroll horizontal visible
-- Boton para ocultar/mostrar el explorador
+- Botón para ocultar/mostrar el explorador
 - El visor usa todo el ancho disponible (sin columna central fija)
-- Acceso rapido a las ultimas carpetas abiertas (hasta 4, en navegadores compatibles)
+- Acceso rápido a las últimas carpetas abiertas (hasta 4, en navegadores compatibles)
 
 ## Uso
 
 1. Abre `index.html` con doble clic (o desde un marcador del navegador).
 2. Pulsa `Elegir carpeta`.
-3. Selecciona la carpeta raiz donde tengas tus markdowns.
-4. Navega por el arbol de la izquierda y abre archivos.
+3. Selecciona la carpeta raíz donde tengas tus markdowns.
+4. Navega por el árbol de la izquierda y abre archivos.
 5. Usa `Ocultar explorador` para ganar ancho de lectura cuando lo necesites.
-6. Usa `Recientes` para reabrir rapidamente una de las ultimas carpetas (si fue abierta con el selector de carpeta del navegador).
+6. Usa `Recientes` para reabrir rápidamente una de las últimas carpetas (si fue abierta con el selector de carpeta del navegador).
 
 ## Navegador recomendado
 
 - `Chrome` o `Edge` modernos (Chromium)
 
-La app intenta usar `showDirectoryPicker()` para una mejor experiencia (auto-refresco y acceso mas fiable).
-Si no esta disponible, usa un fallback con selector de archivos (`webkitdirectory`) con limitaciones.
+La app intenta usar `showDirectoryPicker()` para una mejor experiencia (auto-refresco y acceso más fiable).
+Si no está disponible, usa un fallback con selector de archivos (`webkitdirectory`) con limitaciones.
 La lista de carpetas recientes funciona cuando el navegador permite guardar handles (Chrome/Edge con File System Access API + IndexedDB).
 
 ## Temas
 
-Los temas estan en `themes/`.
+Los temas están en `themes/`.
 
 - `themes/default.css`
 - `themes/github-like.css`
@@ -48,14 +48,14 @@ Los temas estan en `themes/`.
 - `themes/night-owl.css`
 - `themes/dracula-soft.css`
 
-Para anadir uno nuevo:
+Para añadir uno nuevo:
 
 1. Crea un CSS nuevo en `themes/` que estilice `.md-content`.
-2. Anadelo en `themes/manifest.js`.
+2. Añádelo en `themes/manifest.js`.
 
 ## Dependencias (CDN)
 
-La app carga librerias desde CDN (sin API keys):
+La app carga librerías desde CDN (sin API keys):
 
 - `markdown-it`
 - `markdown-it-footnote`
