@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Markdown Viewer Local</title>
+  <meta name="description" content="Visor local de Markdown con explorador recursivo, Mermaid y temas.">
+
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <link id="theme-link" rel="stylesheet" href="themes/default.css">
+
+  <script>
+    window.MDViewer = window.MDViewer || {};
+    window.MDViewer.cdnErrors = [];
+    window.__mdViewerCdnError = function (name, src) {
+      window.MDViewer.cdnErrors.push({ name: name, src: src, at: Date.now() });
+    };
+  </script>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js" onerror="window.__mdViewerCdnError('markdown-it', this.src)"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@4.0.0/dist/markdown-it-footnote.min.js" onerror="window.__mdViewerCdnError('markdown-it-footnote', this.src)"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/markdown-it-task-lists@2.1.1/dist/markdown-it-task-lists.min.js" onerror="window.__mdViewerCdnError('markdown-it-task-lists', this.src)"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/markdown-it-deflist@2.1.0/dist/markdown-it-deflist.min.js" onerror="window.__mdViewerCdnError('markdown-it-deflist', this.src)"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" onerror="window.__mdViewerCdnError('highlight.js', this.src)"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js" onerror="window.__mdViewerCdnError('DOMPurify', this.src)"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js" onerror="window.__mdViewerCdnError('Mermaid', this.src)"></script>
+
+  <script defer src="themes/manifest.js"></script>
+  <script defer src="js/state.js"></script>
+  <script defer src="js/themes.js"></script>
+  <script defer src="js/fs.js"></script>
+  <script defer src="js/tree.js"></script>
+  <script defer src="js/markdown.js"></script>
+  <script defer src="js/links.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar" role="banner">
+      <div class="topbar-group">
+        <button id="pick-folder-btn" class="btn btn-primary" type="button">Elegir carpeta</button>
+        <button id="refresh-btn" class="btn" type="button" disabled>Refrescar</button>
+        <button id="toggle-sidebar-btn" class="btn" type="button" aria-pressed="false">Ocultar explorador</button>
+        <label class="toggle" for="auto-refresh-toggle">
+          <input id="auto-refresh-toggle" type="checkbox" checked>
+          <span>Auto-refresco</span>
+        </label>
+      </div>
+
+      <div class="topbar-group topbar-right">
+        <span id="mode-badge" class="mode-badge">Sin carpeta</span>
+        <label class="select-wrap" for="recent-folders-select">
+          <span>Recientes</span>
+          <select id="recent-folders-select" aria-label="Carpetas recientes" disabled>
+            <option value="">Sin recientes</option>
+          </select>
+        </label>
+        <button id="open-recent-btn" class="btn" type="button" disabled>Abrir reciente</button>
+        <label class="select-wrap" for="theme-select">
+          <span>Tema</span>
+          <select id="theme-select" aria-label="Selector de tema"></select>
+        </label>
+      </div>
+    </header>
+
+    <div id="root-label" class="root-label">No hay carpeta seleccionada</div>
+    <div id="banner-stack" class="banner-stack" aria-live="polite" aria-atomic="false"></div>
+
+    <main class="layout" role="main">
+      <aside class="sidebar" aria-label="Explorador de archivos">
+        <div class="sidebar-header">
+          <h1>Explorador</h1>
+          <div id="file-count" class="file-count">0 markdowns</div>
+        </div>
+
+        <div class="sidebar-search">
+          <input id="tree-filter-input" class="search-input" type="search" placeholder="Filtrar por nombre o ruta" autocomplete="off">
+        </div>
+
+        <div id="tree-container" class="tree-container" role="tree" aria-label="Árbol de markdowns">
+          <div class="tree-empty">Elige una carpeta para ver sus markdowns.</div>
+        </div>
+      </aside>
+
+      <section class="viewer-panel" aria-label="Vista del markdown">
+        <div class="doc-header">
+          <div id="doc-title" class="doc-title">Selecciona un Markdown</div>
+          <div id="doc-meta" class="doc-meta"></div>
+        </div>
+
+        <div id="viewer-scroll" class="viewer-scroll">
+          <article id="md-content" class="md-content" aria-live="polite">
+            <div class="empty-state">
+              <h2>Markdown Viewer Local</h2>
+              <p>Abre una carpeta para explorar y visualizar archivos Markdown en subcarpetas.</p>
+              <p>Recomendado: Chrome o Edge modernos.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <input id="compat-folder-input" type="file" hidden multiple webkitdirectory directory>
+</body>
+</html>

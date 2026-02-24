@@ -1,0 +1,254 @@
+.md-content {
+  --md-bg: #f7fafc;
+  --md-surface: #ffffff;
+  --md-border: #d9e3ef;
+  --md-text: #1f2d3d;
+  --md-muted: #5f738a;
+  --md-heading: #102235;
+  --md-link: #0f6ecf;
+  --md-link-hover: #0a5ab0;
+  --md-code-bg: #eef3f8;
+  --md-pre-bg: #0f1722;
+  --md-pre-text: #edf5ff;
+  --md-quote-bg: #f2f7fd;
+  --md-quote-border: #8bb6df;
+  --md-table-header: #ecf4fc;
+  --md-hr: #d6e0ec;
+  --md-mark: #fff1a6;
+  --md-inline-code: #9a1f4a;
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 28px 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(120, 147, 177, 0.14);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(42, 139, 240, 0.07), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f9fbfd 100%);
+  box-shadow: 0 14px 30px rgba(9, 16, 26, 0.06);
+
+  color: var(--md-text);
+  font: 400 16px/1.68 "Georgia", "Charter", "Iowan Old Style", serif;
+}
+
+.md-content > :first-child {
+  margin-top: 0;
+}
+
+.md-content > :last-child {
+  margin-bottom: 0;
+}
+
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6 {
+  color: var(--md-heading);
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.55em;
+  font-family: "Segoe UI Variable", "Segoe UI", "Aptos", sans-serif;
+  font-weight: 700;
+  scroll-margin-top: 18px;
+}
+
+.md-content h1 {
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  border-bottom: 2px solid rgba(18, 52, 84, 0.08);
+  padding-bottom: 0.3em;
+}
+
+.md-content h2 {
+  font-size: 1.55rem;
+  border-bottom: 1px solid rgba(18, 52, 84, 0.08);
+  padding-bottom: 0.22em;
+}
+
+.md-content h3 {
+  font-size: 1.28rem;
+}
+
+.md-content h4 {
+  font-size: 1.08rem;
+}
+
+.md-content p,
+.md-content ul,
+.md-content ol,
+.md-content dl,
+.md-content table,
+.md-content pre,
+.md-content blockquote {
+  margin-top: 0.95em;
+  margin-bottom: 0.95em;
+}
+
+.md-content a {
+  color: var(--md-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.md-content a:hover {
+  color: var(--md-link-hover);
+}
+
+.md-content hr {
+  border: 0;
+  border-top: 1px solid var(--md-hr);
+  margin: 1.6em 0;
+}
+
+.md-content strong {
+  color: #112a42;
+}
+
+.md-content em {
+  color: #3e5269;
+}
+
+.md-content code {
+  font-family: "Cascadia Code", "Fira Code", Consolas, monospace;
+}
+
+.md-content :not(pre) > code {
+  background: var(--md-code-bg);
+  color: var(--md-inline-code);
+  border: 1px solid rgba(160, 178, 199, 0.28);
+  border-radius: 6px;
+  padding: 0.12em 0.35em;
+  font-size: 0.92em;
+}
+
+.md-content pre {
+  background: var(--md-pre-bg);
+  color: var(--md-pre-text);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 14px 16px;
+  overflow: auto;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.md-content pre code {
+  color: inherit;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 0.92rem;
+}
+
+.md-content blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.8em 1em;
+  background: var(--md-quote-bg);
+  border-left: 4px solid var(--md-quote-border);
+  border-radius: 0 10px 10px 0;
+  color: #33495f;
+}
+
+.md-content ul,
+.md-content ol {
+  padding-left: 1.5em;
+}
+
+.md-content li + li {
+  margin-top: 0.24em;
+}
+
+.md-content li.task-list-item {
+  list-style: none;
+  margin-left: -1.35em;
+  padding-left: 0.15em;
+}
+
+.md-content li.task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+  transform: translateY(1px);
+}
+
+.md-content table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--md-border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  overflow-x: auto;
+}
+
+.md-content thead {
+  background: var(--md-table-header);
+}
+
+.md-content th,
+.md-content td {
+  border: 1px solid var(--md-border);
+  padding: 0.55em 0.7em;
+  text-align: left;
+  vertical-align: top;
+}
+
+.md-content th {
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+  font-weight: 650;
+}
+
+.md-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(120, 147, 177, 0.18);
+  background: #fff;
+}
+
+.md-content .image-broken {
+  border: 1px dashed #c67b8f;
+  background: #fff3f6;
+  padding: 0.5em;
+}
+
+.md-content .mermaid {
+  overflow-x: auto;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(120, 147, 177, 0.18);
+  background: #fbfdff;
+}
+
+.md-content .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.md-content mark {
+  background: var(--md-mark);
+  color: inherit;
+  padding: 0 0.15em;
+  border-radius: 4px;
+}
+
+.md-content sup,
+.md-content sub {
+  line-height: 0;
+}
+
+.md-content .footnotes {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-hr);
+  color: var(--md-muted);
+  font-size: 0.92rem;
+}
+
+.md-content .footnotes ol {
+  padding-left: 1.4em;
+}
+
+.md-content .footnote-ref {
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+}

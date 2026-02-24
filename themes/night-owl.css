@@ -1,0 +1,99 @@
+.md-content {
+  --md-text: #c8d7f1;
+  --md-muted: #95a8c8;
+  --md-heading: #edf4ff;
+  --md-link: #7fd3ff;
+  --md-link-hover: #a8e2ff;
+  --md-border: #2a3a57;
+  --md-inline-bg: #12233a;
+  --md-inline-text: #ffb3d1;
+  --md-pre-bg: #0a1322;
+  --md-pre-text: #dbe8ff;
+  --md-quote-bg: #101d31;
+  --md-quote-border: #5eb7ff;
+  --md-table-head: #10253f;
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 30px 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(60, 86, 126, 0.4);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(90, 195, 255, 0.12), transparent 40%),
+    radial-gradient(circle at 12% 92%, rgba(70, 118, 255, 0.1), transparent 42%),
+    linear-gradient(180deg, #0b1424 0%, #0f1a2d 100%);
+  box-shadow: 0 16px 34px rgba(3, 8, 18, 0.35);
+  color: var(--md-text);
+  font: 400 16px/1.68 "Aptos", "Segoe UI", sans-serif;
+}
+
+.md-content > :first-child { margin-top: 0; }
+.md-content > :last-child { margin-bottom: 0; }
+.md-content h1, .md-content h2, .md-content h3, .md-content h4, .md-content h5, .md-content h6 {
+  color: var(--md-heading);
+  line-height: 1.22;
+  margin: 1.35em 0 0.52em;
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+  font-weight: 700;
+  scroll-margin-top: 18px;
+}
+.md-content h1 { font-size: 2rem; border-bottom: 2px solid rgba(102, 152, 224, 0.18); padding-bottom: 0.22em; }
+.md-content h2 { font-size: 1.48rem; border-bottom: 1px solid rgba(102, 152, 224, 0.18); padding-bottom: 0.18em; }
+.md-content h3 { font-size: 1.2rem; }
+.md-content p, .md-content ul, .md-content ol, .md-content dl, .md-content table, .md-content pre, .md-content blockquote { margin: 0.92em 0; }
+.md-content a { color: var(--md-link); }
+.md-content a:hover { color: var(--md-link-hover); }
+.md-content hr { border: 0; border-top: 1px solid var(--md-border); margin: 1.45em 0; }
+.md-content ul, .md-content ol { padding-left: 1.45em; }
+.md-content li.task-list-item { list-style: none; margin-left: -1.35em; }
+.md-content li.task-list-item input[type="checkbox"] { margin-right: 0.45em; accent-color: #6fc8ff; }
+
+.md-content code { font-family: "Cascadia Code", Consolas, monospace; }
+.md-content :not(pre) > code {
+  background: var(--md-inline-bg);
+  color: var(--md-inline-text);
+  border: 1px solid rgba(93, 130, 184, 0.25);
+  border-radius: 6px;
+  padding: 0.12em 0.35em;
+}
+.md-content pre {
+  background: var(--md-pre-bg);
+  color: var(--md-pre-text);
+  border-radius: 10px;
+  padding: 14px 16px;
+  overflow: auto;
+  border: 1px solid rgba(137, 170, 224, 0.12);
+}
+.md-content pre code { color: inherit; background: transparent; border: 0; padding: 0; }
+
+.md-content blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.75em 0.95em;
+  background: var(--md-quote-bg);
+  border-left: 4px solid var(--md-quote-border);
+  border-radius: 0 8px 8px 0;
+  color: #cfe2ff;
+}
+
+.md-content table { display: block; max-width: 100%; overflow: auto; border-collapse: collapse; border: 1px solid var(--md-border); }
+.md-content thead { background: var(--md-table-head); }
+.md-content th, .md-content td { border: 1px solid var(--md-border); padding: 0.5em 0.65em; text-align: left; vertical-align: top; }
+.md-content tr:nth-child(2n) { background: rgba(255, 255, 255, 0.02); }
+
+.md-content img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid rgba(111, 200, 255, 0.16); background: #fff; }
+.md-content .image-broken { border: 1px dashed #d27f97; background: rgba(255, 243, 246, 0.96); color: #482533; padding: 0.5em; }
+
+.md-content .mermaid {
+  overflow-x: auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(111, 200, 255, 0.16);
+  background: #f8fbff;
+  color: #111827;
+}
+.md-content .mermaid svg { max-width: 100%; height: auto; }
+
+.md-content mark { background: #f2d166; color: #19212f; padding: 0 0.12em; border-radius: 4px; }
+.md-content .footnotes { margin-top: 1.8rem; padding-top: 0.8rem; border-top: 1px solid var(--md-border); color: var(--md-muted); font-size: 0.92rem; }
+.md-content .footnotes ol { padding-left: 1.35em; }

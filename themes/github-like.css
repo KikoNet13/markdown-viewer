@@ -1,0 +1,225 @@
+.md-content {
+  --md-text: #24292f;
+  --md-muted: #57606a;
+  --md-border: #d0d7de;
+  --md-accent: #0969da;
+  --md-bg: #ffffff;
+  --md-subtle: #f6f8fa;
+  --md-code-bg: rgba(175, 184, 193, 0.2);
+  --md-pre-bg: #f6f8fa;
+  --md-quote: #656d76;
+
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 30px 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(208, 215, 222, 0.8);
+  background: linear-gradient(180deg, #fff 0%, #fcfdff 100%);
+  box-shadow: 0 10px 24px rgba(31, 35, 40, 0.06);
+
+  color: var(--md-text);
+  font: 400 16px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  word-wrap: break-word;
+}
+
+.md-content > :first-child {
+  margin-top: 0;
+}
+
+.md-content > :last-child {
+  margin-bottom: 0;
+}
+
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #1f2328;
+  scroll-margin-top: 18px;
+}
+
+.md-content h1 {
+  font-size: 2em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-border);
+}
+
+.md-content h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-border);
+}
+
+.md-content h3 {
+  font-size: 1.25em;
+}
+
+.md-content h4 {
+  font-size: 1em;
+}
+
+.md-content p,
+.md-content blockquote,
+.md-content ul,
+.md-content ol,
+.md-content dl,
+.md-content table,
+.md-content pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.md-content hr {
+  height: 0.25em;
+  padding: 0;
+  margin: 24px 0;
+  background-color: #d8dee4;
+  border: 0;
+}
+
+.md-content a {
+  color: var(--md-accent);
+  text-decoration: none;
+}
+
+.md-content a:hover {
+  text-decoration: underline;
+}
+
+.md-content ul,
+.md-content ol {
+  padding-left: 2em;
+}
+
+.md-content li + li {
+  margin-top: 0.25em;
+}
+
+.md-content li.task-list-item {
+  list-style: none;
+  margin-left: -1.4em;
+}
+
+.md-content li.task-list-item input[type="checkbox"] {
+  margin: 0 0.45em 0.2em 0.2em;
+  vertical-align: middle;
+}
+
+.md-content dl dt {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.md-content dl dd {
+  margin-left: 1.25em;
+}
+
+.md-content blockquote {
+  padding: 0 1em;
+  color: var(--md-quote);
+  border-left: 0.25em solid var(--md-border);
+}
+
+.md-content code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.md-content :not(pre) > code {
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  background-color: var(--md-code-bg);
+  border-radius: 6px;
+}
+
+.md-content pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: var(--md-pre-bg);
+  border-radius: 8px;
+  border: 1px solid rgba(208, 215, 222, 0.7);
+}
+
+.md-content pre code {
+  display: inline;
+  max-width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.md-content table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.md-content table th,
+.md-content table td {
+  padding: 6px 13px;
+  border: 1px solid var(--md-border);
+}
+
+.md-content table tr {
+  background-color: var(--md-bg);
+  border-top: 1px solid var(--md-border);
+}
+
+.md-content table tr:nth-child(2n) {
+  background-color: var(--md-subtle);
+}
+
+.md-content img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: var(--md-bg);
+  border-radius: 8px;
+}
+
+.md-content .image-broken {
+  border: 1px dashed #cf8697;
+  background: #fff3f6;
+  padding: 0.5em;
+}
+
+.md-content .mermaid {
+  display: block;
+  overflow-x: auto;
+  border: 1px solid rgba(208, 215, 222, 0.7);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+
+.md-content .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.md-content .footnotes {
+  font-size: 0.9em;
+  color: var(--md-muted);
+  border-top: 1px solid var(--md-border);
+  margin-top: 24px;
+  padding-top: 12px;
+}
+
+.md-content .footnotes ol {
+  padding-left: 1.4em;
+}
