@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Markdown Viewer icon">
+  <defs>
+    <style>
+      .bg{fill:#0f172a}.doc{fill:#f8fafc}.fold{fill:#cbd5e1}.acc{stroke:#14b8a6;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;fill:none}.ink{stroke:#0f172a;stroke-width:8;stroke-linecap:round}
+    </style>
+  </defs>
+  <rect class="bg" x="15" y="15" width="226" height="226" rx="56"/>
+  <path class="doc" d="M59 44h103l36 36v132H59z"/>
+  <path class="fold" d="M162 44v36h36z"/>
+  <path class="acc" d="M99 136l24-24M99 136l24 24"/>
+  <path class="acc" d="M157 136l-24-24M157 136l-24 24"/>
+  <line class="ink" x1="90" y1="177" x2="166" y2="177"/>
+</svg>
